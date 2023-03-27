@@ -45,7 +45,6 @@ class CMainActivity: AppCompatActivity(), LocationListener {
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), locationPermissionCode)
         }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5f, this)
-        sendLocation(locationManager.getCurrentLocation())
     }
     override fun onLocationChanged(location: Location) {
 
